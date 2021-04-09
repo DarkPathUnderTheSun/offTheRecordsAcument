@@ -7,11 +7,14 @@ logBuffer = []
 print('---------- Starting Network Tester ---------\n')
 print('Programmed by Carlos Morin for Acument Global Technologies')
 logBuffer.append('---------- Starting Network Tester ---------\n')
-with open('net_tests.log', 'a') as log:
-  log.write('\n'.join(logBuffer))
 
 while True:
   try:
+    now = datetime.now()
+    formatForFile = '%d-%m-%Y'
+    date = now.strftime(formatForFile)
+    filename = 'net_tests_' + str(date) + '.log'
+
     logBuffer = []
     
     now = datetime.now()
@@ -31,7 +34,7 @@ while True:
       print(stringBuffer)
       logBuffer.append(stringBuffer)
     except:
-      stringBuffer = 'Not connected, defaulting to 100% packet loss'
+      stringBuffer = 'Not connected, defaulting to 100 % packet loss'
       print(stringBuffer)
       logBuffer.append(stringBuffer)
       packetLoss = 100
@@ -75,7 +78,7 @@ while True:
     logBuffer.append('--------------------------------------------\n')
     
     logBuffer.insert(0, '')
-    with open('net_tests.log', 'a') as log:
+    with open(filename, 'a') as log:
       log.write('\n'.join(logBuffer))
 
     sleep(600)
@@ -97,7 +100,7 @@ while True:
     logBuffer.append(stringBuffer)
 
     logBuffer.insert(0, '')
-    with open('net_tests.log', 'a') as log:
+    with open(filename, 'a') as log:
       log.write('\n'.join(logBuffer))
     
     raise

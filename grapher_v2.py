@@ -1,8 +1,17 @@
-#The script f2py.exe is installed in 'C:\Users\agcruz\AppData\Roaming\Python\Python39\Scripts' which is not on PATH.
 import matplotlib.pyplot as plt
+from datetime import datetime
 import datetime
+import sys
 
-filename = "net_tests.log"
+if len(sys.argv) == 1:
+    now = datetime.datetime.now()
+    formatForFile = '%d-%m-%Y'
+    date = now.strftime(formatForFile)
+    filename = 'net_tests_' + str(date) + '.log'
+    print('Opening file ' + str(filename))
+else:
+    filename = sys.argv[1]
+    print('Opening file ' + str(filename))
 
 with open(filename) as f:
     content = f.readlines()
@@ -44,15 +53,8 @@ for line in content:
         #dates.append(line.split()[5])
         primitiveDateTime = line.split()[4]+' '+line.split()[5]
         date_time_str = primitiveDateTime
-        date_time_obj = datetime.datetime.strptime(date_time_str, "%d/%m/%Y %H:%M:%S")
+        date_time_obj = datetime.datetime.strptime(date_time_str, '%d/%m/%Y %H:%M:%S')
         dates.append(date_time_obj)
-
-
-# print(upload)
-# print(download)
-# print(packetLoss)
-# print(dates)
-
 
 # PLOT
 print('Success!')
@@ -67,7 +69,7 @@ axis[0].legend(['Upload', 'Download'])
 axis[0].set_title("Internet Speed")
 
 axis[1].plot(dates,packetLoss)
-axis[1].set(xlabel="Time", ylabel="%")
+axis[1].set(xlabel='Time', ylabel='%')
 axis[1].set_title("Packet Loss")
 
 print('Plot on screen. Close plot to end program.')
