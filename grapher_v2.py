@@ -58,6 +58,32 @@ for line in content:
 
 # PLOT
 print('Success!')
+
+print('\n------------------------------')
+print('Quick stats for this log file:')
+uploadAverage = round(sum(upload)/len(upload),2)
+uploadMin = min(upload)
+uploadMax = max(upload)
+print('Download:')
+print('Minimum Upload Speed: ' + str(uploadMin))
+print('Average Upload Speed: ' + str(uploadAverage))
+print('Maximum Upload Speed: ' + str(uploadMax))
+downloadAverage = round(sum(download)/len(download),2)
+downloadMin = min(download)
+downloadMax = max(download)
+print('Upload:')
+print('Minimum Download Speed: ' + str(downloadMin))
+print('Average Download Speed: ' + str(downloadAverage))
+print('Maximum Download Speed: ' + str(downloadMax))
+packetLossAverage = round(sum(packetLoss)/len(packetLoss),2)
+packetLossMin = min(packetLoss)
+packetLossMax = max(packetLoss)
+print('Packet Loss:')
+print('Minimum Packet Loss: ' + str(packetLossMin))
+print('Average Packet Loss: ' + str(packetLossAverage))
+print('Maximum Packet Loss: ' + str(packetLossMax))
+print('------------------------------\n')
+
 print('Plotting results...')
 
 figure, axis = plt.subplots(2, 1)
@@ -67,10 +93,12 @@ axis[0].plot(dates,download)
 axis[0].set(ylabel="Mb/s")
 axis[0].legend(['Upload', 'Download'])
 axis[0].set_title("Internet Speed")
+axis[0].grid()
 
 axis[1].plot(dates,packetLoss)
-axis[1].set(xlabel='Time', ylabel='%')
+axis[1].set(xlabel='Time (d H:M)', ylabel='%', ylim=[0,100])
 axis[1].set_title("Packet Loss")
+axis[1].grid()
 
 print('Plot on screen. Close plot to end program.')
 
