@@ -13,7 +13,7 @@ while True:
     now = datetime.now()
     formatForFile = '%d-%m-%Y'
     date = now.strftime(formatForFile)
-    filename = 'net_tests_' + str(date) + '.log'
+    filename = 'logs/net_tests_' + str(date) + '.log'
 
     logBuffer = []
     

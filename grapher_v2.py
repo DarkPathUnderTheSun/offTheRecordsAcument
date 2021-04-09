@@ -7,10 +7,10 @@ if len(sys.argv) == 1:
     now = datetime.datetime.now()
     formatForFile = '%d-%m-%Y'
     date = now.strftime(formatForFile)
-    filename = 'net_tests_' + str(date) + '.log'
+    filename = 'logs/net_tests_' + str(date) + '.log'
     print('Opening file ' + str(filename))
 else:
-    filename = sys.argv[1]
+    filename = 'logs/' + sys.argv[1]
     print('Opening file ' + str(filename))
 
 with open(filename) as f:
