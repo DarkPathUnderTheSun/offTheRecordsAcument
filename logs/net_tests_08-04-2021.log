@@ -1,0 +1,64 @@
+
+---------- Starting Network Tester ---------
+
+Network Test starting at 08/04/2021 16:12:28
+Testing for Packet Loss...
+Packet Loss: 1 %
+Testing download speed...
+Download Speed: 16.26 Mb/s
+Testing upload speed...
+Upload Speed: 18.21 Mb/s
+Network Test finished at 08/04/2021 16:14:39
+--------------------------------------------
+
+Network Tester interrupted. If a user did this, you can ignore this message.
+
+Tester terminated at 08/04/2021 16:12:28
+--------------------------------------------
+---------- Starting Network Tester ---------
+
+Network Test starting at 08/04/2021 16:24:26
+Testing for Packet Loss...
+Packet Loss: 1 %
+Testing download speed...
+Download Speed: 19.95 Mb/s
+Testing upload speed...
+Upload Speed: 18.32 Mb/s
+Network Test finished at 08/04/2021 16:26:38
+--------------------------------------------
+
+Network Test starting at 08/04/2021 16:36:39
+Testing for Packet Loss...
+Packet Loss: 2 %
+Testing download speed...
+Download Speed: 20.9 Mb/s
+Testing upload speed...
+Upload Speed: 10.18 Mb/s
+Network Test finished at 08/04/2021 16:38:58
+--------------------------------------------
+
+Network Test starting at 08/04/2021 16:48:58
+Testing for Packet Loss...
+Packet Loss: 6 %
+Testing download speed...
+Download Speed: 17.21 Mb/s
+Testing upload speed...
+Upload Speed: 12.97 Mb/s
+Network Test finished at 08/04/2021 16:51:28
+--------------------------------------------
+
+Network Test starting at 08/04/2021 17:01:28
+Testing for Packet Loss...
+Packet Loss: 0 %
+Testing download speed...
+Download Speed: 20.42 Mb/s
+Testing upload speed...
+Upload Speed: 15.19 Mb/s
+Network Test finished at 08/04/2021 17:03:36
+--------------------------------------------
+
+Network Tester interrupted. If a user did this, you can ignore this message.
+
+Tester terminated at 08/04/2021 17:01:28
+--------------------------------------------
+
